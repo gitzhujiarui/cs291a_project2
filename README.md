@@ -85,7 +85,7 @@ docker build -t us.gcr.io/cs291a/project2_jiarui-zhu .
 docker run -it --rm \
   -p 3000:3000 \
   -v ~/.config/gcloud/application_default_credentials.json:/root/.config/gcloud/application_default_credentials.json \
-  us.gcr.io/cs291a/project2_${CS291_ACCOUNT}
+  us.gcr.io/cs291a/project2_jiarui-zhu
 ```
 
 ### Test Using CURL
