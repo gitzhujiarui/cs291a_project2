@@ -78,6 +78,9 @@ application:
 ```sh
 docker build -t us.gcr.io/cs291a/project2_jiarui-zhu .
 ```
+```sh
+docker build -t us.gcr.io/cs291a/project2_jiarui-zhu . --platform=linux/amd64
+```
 
 ### Run Locally
 
