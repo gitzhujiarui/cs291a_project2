@@ -76,7 +76,10 @@ application:
 ### Build Container
 
 ```sh
-docker build -t us.gcr.io/cs291a/project2_${CS291_ACCOUNT} .
+docker build -t us.gcr.io/cs291a/project2_jiarui-zhu .
+```
+```sh
+docker build -t us.gcr.io/cs291a/project2_jiarui-zhu . --platform=linux/amd64
 ```
 
 ### Run Locally
@@ -85,7 +88,7 @@ docker build -t us.gcr.io/cs291a/project2_${CS291_ACCOUNT} .
 docker run -it --rm \
   -p 3000:3000 \
   -v ~/.config/gcloud/application_default_credentials.json:/root/.config/gcloud/application_default_credentials.json \
-  us.gcr.io/cs291a/project2_${CS291_ACCOUNT}
+  us.gcr.io/cs291a/project2_jiarui-zhu
 ```
 
 ### Test Using CURL
@@ -115,7 +118,7 @@ following two steps:
 ### Push Container to Google Container Registry
 
 ```sh
-docker push us.gcr.io/cs291a/project2_${CS291_ACCOUNT}
+docker push us.gcr.io/cs291a/project2_jiarui-zhu
 ```
 
 ### Deploy to Google Cloud Run
@@ -124,14 +127,14 @@ docker push us.gcr.io/cs291a/project2_${CS291_ACCOUNT}
 gcloud beta run deploy \
   --allow-unauthenticated \
   --concurrency 80 \
-  --image us.gcr.io/cs291a/project2_${CS291_ACCOUNT} \
+  --image us.gcr.io/cs291a/project2_jiarui-zhu \
   --memory 128Mi \
   --platform managed \
   --project cs291a \
   --region us-central1 \
   --service-account project2@cs291a.iam.gserviceaccount.com \
   --set-env-vars RACK_ENV=production \
-  ${CS291_ACCOUNT}
+  jiarui-zhu
 ```
 
 The last line of output should look similar to the following:
